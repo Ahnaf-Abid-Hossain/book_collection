@@ -12,7 +12,7 @@ RSpec.describe 'Creating a book', type: :feature do
     fill_in "book[published_date]", with: published_date.strftime('%Y-%m-%d')
     click_on 'Create Book'
     visit "http://localhost:3000/books"
-    puts page.body
+    #puts page.body
     expect(page).to have_content('harry potter')
   end
 end
